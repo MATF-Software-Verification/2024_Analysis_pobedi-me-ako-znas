@@ -790,6 +790,5 @@
             <location file="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/application/podrundaui.cpp" line="98" column="0"/>
             <symbol>setPlayer2</symbol>
         </error>
-        <error id="missingInclude" severity="information" msg="Cppcheck cannot find all the include files (use --check-config for details)" verbose="Cppcheck cannot find all the include files. Cppcheck can check the code without the include files found. But the results will probably be more accurate if all the include files are found. Please check your project&apos;s include directories and add all of them as include directories for Cppcheck. To see what files Cppcheck cannot find use --check-config."/>
     </errors>
 </results>
