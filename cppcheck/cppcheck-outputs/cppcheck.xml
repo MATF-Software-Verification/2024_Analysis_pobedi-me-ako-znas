@@ -1,0 +1,795 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<results version="2">
+    <cppcheck version="1.90"/>
+    <errors>
+        <error id="virtualDestructor" severity="warning" msg="Class &apos;Game&apos; which has virtual members does not have a virtual destructor." verbose="Class &apos;Game&apos; which has virtual members does not have a virtual destructor." cwe="404" inconclusive="true">
+            <location file0="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/application/game.cpp" file="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/application/game.h" line="10" column="6"/>
+            <symbol>Game</symbol>
+        </error>
+        <error id="functionStatic" severity="performance" msg="Technically the member function &apos;Game::onIsFinished&apos; can be static (but you may consider moving to unnamed namespace)." verbose="The member function &apos;Game::onIsFinished&apos; can be made a static function. Making a function static can bring a performance benefit since no &apos;this&apos; instance is passed to the function. This change should not cause compiler errors but it does not necessarily make sense conceptually. Think about your design and the task of the function first - is it a function that must not access members of class instances? And maybe it is more appropriate to move this function to a unnamed namespace." cwe="398" inconclusive="true">
+            <location file0="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/application/game.cpp" file="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/application/game.h" line="16" column="10"/>
+            <location file="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/application/game.cpp" line="4" column="12"/>
+            <symbol>Game::onIsFinished</symbol>
+        </error>
+        <error id="useInitializationList" severity="performance" msg="Variable &apos;player1&apos; is assigned in constructor body. Consider performing initialization in initialization list." verbose="When an object of a class is created, the constructors of all member variables are called consecutively in the order the variables are declared, even if you don&apos;t explicitly write them to the initialization list. You could avoid assigning &apos;player1&apos; a value by passing the value to the constructor in the initialization list." cwe="398">
+            <location file="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/application/koznaui.cpp" line="61" column="5"/>
+            <symbol>player1</symbol>
+        </error>
+        <error id="useInitializationList" severity="performance" msg="Variable &apos;player2&apos; is assigned in constructor body. Consider performing initialization in initialization list." verbose="When an object of a class is created, the constructors of all member variables are called consecutively in the order the variables are declared, even if you don&apos;t explicitly write them to the initialization list. You could avoid assigning &apos;player2&apos; a value by passing the value to the constructor in the initialization list." cwe="398">
+            <location file="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/application/koznaui.cpp" line="62" column="5"/>
+            <symbol>player2</symbol>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;KoZnaui&apos; argument 3 names different: declaration &apos;player1&apos; definition &apos;player11&apos;." verbose="Function &apos;KoZnaui&apos; argument 3 names different: declaration &apos;player1&apos; definition &apos;player11&apos;." cwe="628" inconclusive="true">
+            <location file="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/application/koznaui.cpp" line="53" column="26"/>
+            <location file0="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/application/koznaui.cpp" file="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/application/koznaui.h" line="24" column="90"/>
+            <symbol>KoZnaui</symbol>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;KoZnaui&apos; argument 4 names different: declaration &apos;player2&apos; definition &apos;player22&apos;." verbose="Function &apos;KoZnaui&apos; argument 4 names different: declaration &apos;player2&apos; definition &apos;player22&apos;." cwe="628" inconclusive="true">
+            <location file="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/application/koznaui.cpp" line="53" column="44"/>
+            <location file0="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/application/koznaui.cpp" file="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/application/koznaui.h" line="24" column="112"/>
+            <symbol>KoZnaui</symbol>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;KoZnaui&apos; argument 6 names different: declaration &apos;player1Points&apos; definition &apos;player1Points1&apos;." verbose="Function &apos;KoZnaui&apos; argument 6 names different: declaration &apos;player1Points&apos; definition &apos;player1Points1&apos;." cwe="628" inconclusive="true">
+            <location file="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/application/koznaui.cpp" line="54" column="22"/>
+            <location file0="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/application/koznaui.cpp" file="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/application/koznaui.h" line="24" column="148"/>
+            <symbol>KoZnaui</symbol>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;KoZnaui&apos; argument 7 names different: declaration &apos;player2Points&apos; definition &apos;player2Points2&apos;." verbose="Function &apos;KoZnaui&apos; argument 7 names different: declaration &apos;player2Points&apos; definition &apos;player2Points2&apos;." cwe="628" inconclusive="true">
+            <location file="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/application/koznaui.cpp" line="54" column="42"/>
+            <location file0="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/application/koznaui.cpp" file="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/application/koznaui.h" line="24" column="171"/>
+            <symbol>KoZnaui</symbol>
+        </error>
+        <error id="useInitializationList" severity="performance" msg="Variable &apos;player1&apos; is assigned in constructor body. Consider performing initialization in initialization list." verbose="When an object of a class is created, the constructors of all member variables are called consecutively in the order the variables are declared, even if you don&apos;t explicitly write them to the initialization list. You could avoid assigning &apos;player1&apos; a value by passing the value to the constructor in the initialization list." cwe="398">
+            <location file="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/application/memorija.cpp" line="22" column="5"/>
+            <symbol>player1</symbol>
+        </error>
+        <error id="useInitializationList" severity="performance" msg="Variable &apos;player2&apos; is assigned in constructor body. Consider performing initialization in initialization list." verbose="When an object of a class is created, the constructors of all member variables are called consecutively in the order the variables are declared, even if you don&apos;t explicitly write them to the initialization list. You could avoid assigning &apos;player2&apos; a value by passing the value to the constructor in the initialization list." cwe="398">
+            <location file="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/application/memorija.cpp" line="23" column="5"/>
+            <symbol>player2</symbol>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;Memorija&apos; argument 3 names different: declaration &apos;player1&apos; definition &apos;firstPlayer&apos;." verbose="Function &apos;Memorija&apos; argument 3 names different: declaration &apos;player1&apos; definition &apos;firstPlayer&apos;." cwe="628" inconclusive="true">
+            <location file="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/application/memorija.cpp" line="15" column="26"/>
+            <location file0="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/application/memorija.cpp" file="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/application/memorija.h" line="21" column="91"/>
+            <symbol>Memorija</symbol>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;Memorija&apos; argument 4 names different: declaration &apos;player2&apos; definition &apos;secondPlayer&apos;." verbose="Function &apos;Memorija&apos; argument 4 names different: declaration &apos;player2&apos; definition &apos;secondPlayer&apos;." cwe="628" inconclusive="true">
+            <location file="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/application/memorija.cpp" line="15" column="47"/>
+            <location file0="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/application/memorija.cpp" file="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/application/memorija.h" line="21" column="113"/>
+            <symbol>Memorija</symbol>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;Memorija&apos; argument 6 names different: declaration &apos;player1Points&apos; definition &apos;firstPlayerPoints&apos;." verbose="Function &apos;Memorija&apos; argument 6 names different: declaration &apos;player1Points&apos; definition &apos;firstPlayerPoints&apos;." cwe="628" inconclusive="true">
+            <location file="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/application/memorija.cpp" line="16" column="22"/>
+            <location file0="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/application/memorija.cpp" file="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/application/memorija.h" line="21" column="149"/>
+            <symbol>Memorija</symbol>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;Memorija&apos; argument 7 names different: declaration &apos;player2Points&apos; definition &apos;SecondPlayerPoints&apos;." verbose="Function &apos;Memorija&apos; argument 7 names different: declaration &apos;player2Points&apos; definition &apos;SecondPlayerPoints&apos;." cwe="628" inconclusive="true">
+            <location file="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/application/memorija.cpp" line="16" column="45"/>
+            <location file0="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/application/memorija.cpp" file="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/application/memorija.h" line="21" column="172"/>
+            <symbol>Memorija</symbol>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;initializeGame&apos; argument 1 names different: declaration &apos;cardIds&apos; definition &apos;cardIdsVector&apos;." verbose="Function &apos;initializeGame&apos; argument 1 names different: declaration &apos;cardIds&apos; definition &apos;cardIdsVector&apos;." cwe="628" inconclusive="true">
+            <location file="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/application/memorija.cpp" line="95" column="45"/>
+            <location file0="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/application/memorija.cpp" file="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/application/memorija.h" line="65" column="39"/>
+            <symbol>initializeGame</symbol>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;onCardClicked&apos; argument 1 names different: declaration &apos;cardId&apos; definition &apos;idReveal&apos;." verbose="Function &apos;onCardClicked&apos; argument 1 names different: declaration &apos;cardId&apos; definition &apos;idReveal&apos;." cwe="628" inconclusive="true">
+            <location file="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/application/memorija.cpp" line="129" column="34"/>
+            <location file0="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/application/memorija.cpp" file="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/application/memorija.h" line="41" column="28"/>
+            <symbol>onCardClicked</symbol>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;switchTurns&apos; argument 1 names different: declaration &apos;isPlayersTurn&apos; definition &apos;t&apos;." verbose="Function &apos;switchTurns&apos; argument 1 names different: declaration &apos;isPlayersTurn&apos; definition &apos;t&apos;." cwe="628" inconclusive="true">
+            <location file="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/application/memorija.cpp" line="330" column="33"/>
+            <location file0="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/application/memorija.cpp" file="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/application/memorija.h" line="72" column="27"/>
+            <symbol>switchTurns</symbol>
+        </error>
+        <error id="constParameter" severity="style" msg="Parameter &apos;cardIdsVector&apos; can be declared with const" verbose="Parameter &apos;cardIdsVector&apos; can be declared with const" cwe="398">
+            <location file="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/application/memorija.cpp" line="95" column="45"/>
+        </error>
+        <error id="useInitializationList" severity="performance" msg="Variable &apos;player1&apos; is assigned in constructor body. Consider performing initialization in initialization list." verbose="When an object of a class is created, the constructors of all member variables are called consecutively in the order the variables are declared, even if you don&apos;t explicitly write them to the initialization list. You could avoid assigning &apos;player1&apos; a value by passing the value to the constructor in the initialization list." cwe="398">
+            <location file="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/application/mojbroj.cpp" line="82" column="5"/>
+            <symbol>player1</symbol>
+        </error>
+        <error id="useInitializationList" severity="performance" msg="Variable &apos;player2&apos; is assigned in constructor body. Consider performing initialization in initialization list." verbose="When an object of a class is created, the constructors of all member variables are called consecutively in the order the variables are declared, even if you don&apos;t explicitly write them to the initialization list. You could avoid assigning &apos;player2&apos; a value by passing the value to the constructor in the initialization list." cwe="398">
+            <location file="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/application/mojbroj.cpp" line="83" column="5"/>
+            <symbol>player2</symbol>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;Mojbroj&apos; argument 3 names different: declaration &apos;player1&apos; definition &apos;player1_&apos;." verbose="Function &apos;Mojbroj&apos; argument 3 names different: declaration &apos;player1&apos; definition &apos;player1_&apos;." cwe="628" inconclusive="true">
+            <location file="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/application/mojbroj.cpp" line="74" column="26"/>
+            <location file0="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/application/mojbroj.cpp" file="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/application/mojbroj.h" line="23" column="90"/>
+            <symbol>Mojbroj</symbol>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;Mojbroj&apos; argument 4 names different: declaration &apos;player2&apos; definition &apos;player2_&apos;." verbose="Function &apos;Mojbroj&apos; argument 4 names different: declaration &apos;player2&apos; definition &apos;player2_&apos;." cwe="628" inconclusive="true">
+            <location file="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/application/mojbroj.cpp" line="74" column="44"/>
+            <location file0="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/application/mojbroj.cpp" file="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/application/mojbroj.h" line="23" column="112"/>
+            <symbol>Mojbroj</symbol>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;Mojbroj&apos; argument 6 names different: declaration &apos;player1Points&apos; definition &apos;player1Points_&apos;." verbose="Function &apos;Mojbroj&apos; argument 6 names different: declaration &apos;player1Points&apos; definition &apos;player1Points_&apos;." cwe="628" inconclusive="true">
+            <location file="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/application/mojbroj.cpp" line="75" column="22"/>
+            <location file0="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/application/mojbroj.cpp" file="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/application/mojbroj.h" line="23" column="148"/>
+            <symbol>Mojbroj</symbol>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;Mojbroj&apos; argument 7 names different: declaration &apos;player2Points&apos; definition &apos;player2Points_&apos;." verbose="Function &apos;Mojbroj&apos; argument 7 names different: declaration &apos;player2Points&apos; definition &apos;player2Points_&apos;." cwe="628" inconclusive="true">
+            <location file="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/application/mojbroj.cpp" line="75" column="42"/>
+            <location file0="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/application/mojbroj.cpp" file="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/application/mojbroj.h" line="23" column="171"/>
+            <symbol>Mojbroj</symbol>
+        </error>
+        <error id="uninitMemberVar" severity="warning" msg="Member variable &apos;MojBrojLogic::targetNumber&apos; is not initialized in the constructor." verbose="Member variable &apos;MojBrojLogic::targetNumber&apos; is not initialized in the constructor." cwe="398">
+            <location file="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/application/mojbrojlogic.cpp" line="10" column="15"/>
+            <symbol>MojBrojLogic::targetNumber</symbol>
+        </error>
+        <error id="useInitializationList" severity="performance" msg="Variable &apos;availableOperations&apos; is assigned in constructor body. Consider performing initialization in initialization list." verbose="When an object of a class is created, the constructors of all member variables are called consecutively in the order the variables are declared, even if you don&apos;t explicitly write them to the initialization list. You could avoid assigning &apos;availableOperations&apos; a value by passing the value to the constructor in the initialization list." cwe="398">
+            <location file="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/application/mojbrojlogic.cpp" line="13" column="5"/>
+            <symbol>availableOperations</symbol>
+        </error>
+        <error id="functionConst" severity="style" msg="Technically the member function &apos;MojBrojLogic::getCurrentRound&apos; can be const." verbose="The member function &apos;MojBrojLogic::getCurrentRound&apos; can be made a const function. Making this function &apos;const&apos; should not cause compiler errors. Even though the function can be made const function technically it may not make sense conceptually. Think about your design and the task of the function first - is it a function that must not change object internal state?" cwe="398" inconclusive="true">
+            <location file0="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/application/mojbrojlogic.cpp" file="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/application/mojbrojlogic.h" line="29" column="15"/>
+            <location file="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/application/mojbrojlogic.cpp" line="16" column="25"/>
+            <symbol>MojBrojLogic::getCurrentRound</symbol>
+        </error>
+        <error id="functionConst" severity="style" msg="Technically the member function &apos;MojBrojLogic::getTargetNumber&apos; can be const." verbose="The member function &apos;MojBrojLogic::getTargetNumber&apos; can be made a const function. Making this function &apos;const&apos; should not cause compiler errors. Even though the function can be made const function technically it may not make sense conceptually. Think about your design and the task of the function first - is it a function that must not change object internal state?" cwe="398" inconclusive="true">
+            <location file0="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/application/mojbrojlogic.cpp" file="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/application/mojbrojlogic.h" line="30" column="9"/>
+            <location file="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/application/mojbrojlogic.cpp" line="21" column="19"/>
+            <symbol>MojBrojLogic::getTargetNumber</symbol>
+        </error>
+        <error id="functionStatic" severity="performance" msg="Technically the member function &apos;MojBrojLogic::vectorToString&apos; can be static (but you may consider moving to unnamed namespace)." verbose="The member function &apos;MojBrojLogic::vectorToString&apos; can be made a static function. Making a function static can bring a performance benefit since no &apos;this&apos; instance is passed to the function. This change should not cause compiler errors but it does not necessarily make sense conceptually. Think about your design and the task of the function first - is it a function that must not access members of class instances? And maybe it is more appropriate to move this function to a unnamed namespace." cwe="398" inconclusive="true">
+            <location file0="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/application/mojbrojlogic.cpp" file="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/application/mojbrojlogic.h" line="38" column="13"/>
+            <location file="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/application/mojbrojlogic.cpp" line="94" column="23"/>
+            <symbol>MojBrojLogic::vectorToString</symbol>
+        </error>
+        <error id="functionStatic" severity="performance" msg="Technically the member function &apos;MojBrojLogic::validateExpression&apos; can be static (but you may consider moving to unnamed namespace)." verbose="The member function &apos;MojBrojLogic::validateExpression&apos; can be made a static function. Making a function static can bring a performance benefit since no &apos;this&apos; instance is passed to the function. This change should not cause compiler errors but it does not necessarily make sense conceptually. Think about your design and the task of the function first - is it a function that must not access members of class instances? And maybe it is more appropriate to move this function to a unnamed namespace." cwe="398" inconclusive="true">
+            <location file0="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/application/mojbrojlogic.cpp" file="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/application/mojbrojlogic.h" line="39" column="10"/>
+            <location file="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/application/mojbrojlogic.cpp" line="105" column="20"/>
+            <symbol>MojBrojLogic::validateExpression</symbol>
+        </error>
+        <error id="useStlAlgorithm" severity="style" msg="Consider using std::accumulate algorithm instead of a raw loop." verbose="Consider using std::accumulate algorithm instead of a raw loop." cwe="398">
+            <location file="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/application/mojbrojlogic.cpp" line="99" column="16"/>
+        </error>
+        <error id="uninitMemberVar" severity="warning" msg="Member variable &apos;Podrunda::guess&apos; is not initialized in the constructor." verbose="Member variable &apos;Podrunda::guess&apos; is not initialized in the constructor." cwe="398">
+            <location file="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/application/podrunda.cpp" line="5" column="11"/>
+            <symbol>Podrunda::guess</symbol>
+        </error>
+        <error id="uninitMemberVar" severity="warning" msg="Member variable &apos;Podrunda::dobio_poene&apos; is not initialized in the constructor." verbose="Member variable &apos;Podrunda::dobio_poene&apos; is not initialized in the constructor." cwe="398">
+            <location file="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/application/podrunda.cpp" line="5" column="11"/>
+            <symbol>Podrunda::dobio_poene</symbol>
+        </error>
+        <error id="unusedVariable" severity="style" msg="Unused variable: answerQuestion" verbose="Unused variable: answerQuestion" cwe="563">
+            <location file="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/application/podrunda.cpp" line="10" column="32"/>
+            <symbol>answerQuestion</symbol>
+        </error>
+        <error id="unusedVariable" severity="style" msg="Unused variable: guess" verbose="Unused variable: guess" cwe="563">
+            <location file="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/application/podrunda.cpp" line="11" column="12"/>
+            <symbol>guess</symbol>
+        </error>
+        <error id="unusedVariable" severity="style" msg="Unused variable: dobio_poene" verbose="Unused variable: dobio_poene" cwe="563">
+            <location file="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/application/podrunda.cpp" line="12" column="9"/>
+            <symbol>dobio_poene</symbol>
+        </error>
+        <error id="useInitializationList" severity="performance" msg="Variable &apos;player1&apos; is assigned in constructor body. Consider performing initialization in initialization list." verbose="When an object of a class is created, the constructors of all member variables are called consecutively in the order the variables are declared, even if you don&apos;t explicitly write them to the initialization list. You could avoid assigning &apos;player1&apos; a value by passing the value to the constructor in the initialization list." cwe="398">
+            <location file="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/application/podrundaui.cpp" line="41" column="5"/>
+            <symbol>player1</symbol>
+        </error>
+        <error id="useInitializationList" severity="performance" msg="Variable &apos;player2&apos; is assigned in constructor body. Consider performing initialization in initialization list." verbose="When an object of a class is created, the constructors of all member variables are called consecutively in the order the variables are declared, even if you don&apos;t explicitly write them to the initialization list. You could avoid assigning &apos;player2&apos; a value by passing the value to the constructor in the initialization list." cwe="398">
+            <location file="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/application/podrundaui.cpp" line="42" column="5"/>
+            <symbol>player2</symbol>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;Podrundaui&apos; argument 3 names different: declaration &apos;player1&apos; definition &apos;playerr1&apos;." verbose="Function &apos;Podrundaui&apos; argument 3 names different: declaration &apos;player1&apos; definition &apos;playerr1&apos;." cwe="628" inconclusive="true">
+            <location file="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/application/podrundaui.cpp" line="31" column="26"/>
+            <location file0="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/application/podrundaui.cpp" file="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/application/podrundaui.h" line="21" column="93"/>
+            <symbol>Podrundaui</symbol>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;Podrundaui&apos; argument 4 names different: declaration &apos;player2&apos; definition &apos;playerr2&apos;." verbose="Function &apos;Podrundaui&apos; argument 4 names different: declaration &apos;player2&apos; definition &apos;playerr2&apos;." cwe="628" inconclusive="true">
+            <location file="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/application/podrundaui.cpp" line="31" column="44"/>
+            <location file0="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/application/podrundaui.cpp" file="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/application/podrundaui.h" line="21" column="115"/>
+            <symbol>Podrundaui</symbol>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;Podrundaui&apos; argument 5 names different: declaration &apos;player1Points&apos; definition &apos;playerr1Points&apos;." verbose="Function &apos;Podrundaui&apos; argument 5 names different: declaration &apos;player1Points&apos; definition &apos;playerr1Points&apos;." cwe="628" inconclusive="true">
+            <location file="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/application/podrundaui.cpp" line="32" column="22"/>
+            <location file0="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/application/podrundaui.cpp" file="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/application/podrundaui.h" line="21" column="133"/>
+            <symbol>Podrundaui</symbol>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;Podrundaui&apos; argument 6 names different: declaration &apos;player2Points&apos; definition &apos;playerr2Points&apos;." verbose="Function &apos;Podrundaui&apos; argument 6 names different: declaration &apos;player2Points&apos; definition &apos;playerr2Points&apos;." cwe="628" inconclusive="true">
+            <location file="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/application/podrundaui.cpp" line="32" column="42"/>
+            <location file0="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/application/podrundaui.cpp" file="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/application/podrundaui.h" line="21" column="156"/>
+            <symbol>Podrundaui</symbol>
+        </error>
+        <error id="unreadVariable" severity="style" msg="Variable &apos;resenje&apos; is assigned a value that is never used." verbose="Variable &apos;resenje&apos; is assigned a value that is never used." cwe="563">
+            <location file="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/application/podrundaui.cpp" line="362" column="25"/>
+            <symbol>resenje</symbol>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;PogodiStaUI&apos; argument 3 names different: declaration &apos;player1&apos; definition &apos;player_1&apos;." verbose="Function &apos;PogodiStaUI&apos; argument 3 names different: declaration &apos;player1&apos; definition &apos;player_1&apos;." cwe="628" inconclusive="true">
+            <location file="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/application/pogodistaui.cpp" line="17" column="74"/>
+            <location file0="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/application/pogodistaui.cpp" file="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/application/pogodistaui.h" line="22" column="34"/>
+            <symbol>PogodiStaUI</symbol>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;PogodiStaUI&apos; argument 4 names different: declaration &apos;player2&apos; definition &apos;player_2&apos;." verbose="Function &apos;PogodiStaUI&apos; argument 4 names different: declaration &apos;player2&apos; definition &apos;player_2&apos;." cwe="628" inconclusive="true">
+            <location file="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/application/pogodistaui.cpp" line="18" column="34"/>
+            <location file0="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/application/pogodistaui.cpp" file="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/application/pogodistaui.h" line="22" column="56"/>
+            <symbol>PogodiStaUI</symbol>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;PogodiStaUI&apos; argument 6 names different: declaration &apos;pogodiStapartija&apos; definition &apos;pSPartija&apos;." verbose="Function &apos;PogodiStaUI&apos; argument 6 names different: declaration &apos;pogodiStapartija&apos; definition &apos;pSPartija&apos;." cwe="628" inconclusive="true">
+            <location file="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/application/pogodistaui.cpp" line="18" column="58"/>
+            <location file0="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/application/pogodistaui.cpp" file="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/application/pogodistaui.h" line="22" column="92"/>
+            <symbol>PogodiStaUI</symbol>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;PogodiStaUI&apos; argument 7 names different: declaration &apos;player1Points&apos; definition &apos;player1_points&apos;." verbose="Function &apos;PogodiStaUI&apos; argument 7 names different: declaration &apos;player1Points&apos; definition &apos;player1_points&apos;." cwe="628" inconclusive="true">
+            <location file="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/application/pogodistaui.cpp" line="18" column="73"/>
+            <location file0="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/application/pogodistaui.cpp" file="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/application/pogodistaui.h" line="23" column="30"/>
+            <symbol>PogodiStaUI</symbol>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;PogodiStaUI&apos; argument 8 names different: declaration &apos;player2Points&apos; definition &apos;player2_points&apos;." verbose="Function &apos;PogodiStaUI&apos; argument 8 names different: declaration &apos;player2Points&apos; definition &apos;player2_points&apos;." cwe="628" inconclusive="true">
+            <location file="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/application/pogodistaui.cpp" line="19" column="30"/>
+            <location file0="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/application/pogodistaui.cpp" file="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/application/pogodistaui.h" line="23" column="53"/>
+            <symbol>PogodiStaUI</symbol>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;setPlayer1&apos; argument 1 names different: declaration &apos;player1&apos; definition &apos;playerr1&apos;." verbose="Function &apos;setPlayer1&apos; argument 1 names different: declaration &apos;player1&apos; definition &apos;playerr1&apos;." cwe="628" inconclusive="true">
+            <location file="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/application/pogodistaui.cpp" line="76" column="38"/>
+            <location file0="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/application/pogodistaui.cpp" file="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/application/pogodistaui.h" line="35" column="29"/>
+            <symbol>setPlayer1</symbol>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;setPlayer2&apos; argument 1 names different: declaration &apos;player2&apos; definition &apos;playerr2&apos;." verbose="Function &apos;setPlayer2&apos; argument 1 names different: declaration &apos;player2&apos; definition &apos;playerr2&apos;." cwe="628" inconclusive="true">
+            <location file="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/application/pogodistaui.cpp" line="82" column="38"/>
+            <location file0="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/application/pogodistaui.cpp" file="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/application/pogodistaui.h" line="36" column="29"/>
+            <symbol>setPlayer2</symbol>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;setPlayer1Points&apos; argument 1 names different: declaration &apos;playerPoints1&apos; definition &apos;playerr1Points&apos;." verbose="Function &apos;setPlayer1Points&apos; argument 1 names different: declaration &apos;playerPoints1&apos; definition &apos;playerr1Points&apos;." cwe="628" inconclusive="true">
+            <location file="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/application/pogodistaui.cpp" line="88" column="40"/>
+            <location file0="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/application/pogodistaui.cpp" file="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/application/pogodistaui.h" line="31" column="31"/>
+            <symbol>setPlayer1Points</symbol>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;setPlayer2Points&apos; argument 1 names different: declaration &apos;playerPoints2&apos; definition &apos;playerr2Points&apos;." verbose="Function &apos;setPlayer2Points&apos; argument 1 names different: declaration &apos;playerPoints2&apos; definition &apos;playerr2Points&apos;." cwe="628" inconclusive="true">
+            <location file="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/application/pogodistaui.cpp" line="94" column="40"/>
+            <location file0="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/application/pogodistaui.cpp" file="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/application/pogodistaui.h" line="32" column="31"/>
+            <symbol>setPlayer2Points</symbol>
+        </error>
+        <error id="functionConst" severity="style" msg="Technically the member function &apos;Recko::getCurrentRow&apos; can be const." verbose="The member function &apos;Recko::getCurrentRow&apos; can be made a const function. Making this function &apos;const&apos; should not cause compiler errors. Even though the function can be made const function technically it may not make sense conceptually. Think about your design and the task of the function first - is it a function that must not change object internal state?" cwe="398" inconclusive="true">
+            <location file0="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/application/recko.cpp" file="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/application/recko.h" line="18" column="9"/>
+            <location file="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/application/recko.cpp" line="31" column="12"/>
+            <symbol>Recko::getCurrentRow</symbol>
+        </error>
+        <error id="functionConst" severity="style" msg="Technically the member function &apos;Recko::getQuizWords&apos; can be const." verbose="The member function &apos;Recko::getQuizWords&apos; can be made a const function. Making this function &apos;const&apos; should not cause compiler errors. Even though the function can be made const function technically it may not make sense conceptually. Think about your design and the task of the function first - is it a function that must not change object internal state?" cwe="398" inconclusive="true">
+            <location file0="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/application/recko.cpp" file="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/application/recko.h" line="21" column="17"/>
+            <location file="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/application/recko.cpp" line="23" column="20"/>
+            <symbol>Recko::getQuizWords</symbol>
+        </error>
+        <error id="useInitializationList" severity="performance" msg="Variable &apos;player1&apos; is assigned in constructor body. Consider performing initialization in initialization list." verbose="When an object of a class is created, the constructors of all member variables are called consecutively in the order the variables are declared, even if you don&apos;t explicitly write them to the initialization list. You could avoid assigning &apos;player1&apos; a value by passing the value to the constructor in the initialization list." cwe="398">
+            <location file="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/application/reckoui.cpp" line="39" column="5"/>
+            <symbol>player1</symbol>
+        </error>
+        <error id="useInitializationList" severity="performance" msg="Variable &apos;player2&apos; is assigned in constructor body. Consider performing initialization in initialization list." verbose="When an object of a class is created, the constructors of all member variables are called consecutively in the order the variables are declared, even if you don&apos;t explicitly write them to the initialization list. You could avoid assigning &apos;player2&apos; a value by passing the value to the constructor in the initialization list." cwe="398">
+            <location file="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/application/reckoui.cpp" line="40" column="5"/>
+            <symbol>player2</symbol>
+        </error>
+        <error id="incorrectStringBooleanError" severity="warning" msg="Conversion of string literal &quot;GAME2_ENDED&quot; to bool always evaluates to true." verbose="Conversion of string literal &quot;GAME2_ENDED&quot; to bool always evaluates to true." cwe="571">
+            <location file="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/application/reckoui.cpp" line="508" column="15"/>
+        </error>
+        <error id="useInitializationList" severity="performance" msg="Variable &apos;players&apos; is assigned in constructor body. Consider performing initialization in initialization list." verbose="When an object of a class is created, the constructors of all member variables are called consecutively in the order the variables are declared, even if you don&apos;t explicitly write them to the initialization list. You could avoid assigning &apos;players&apos; a value by passing the value to the constructor in the initialization list." cwe="398">
+            <location file="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/server/server/lobby.cpp" line="5" column="5"/>
+            <symbol>players</symbol>
+        </error>
+        <error id="unreadVariable" severity="style" msg="Variable &apos;session&apos; is assigned a value that is never used." verbose="Variable &apos;session&apos; is assigned a value that is never used." cwe="563">
+            <location file="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/server/server/lobby.cpp" line="23" column="26"/>
+            <symbol>session</symbol>
+        </error>
+        <error id="uninitMemberVar" severity="warning" msg="Member variable &apos;Player::pobednik&apos; is not initialized in the constructor." verbose="Member variable &apos;Player::pobednik&apos; is not initialized in the constructor." cwe="398">
+            <location file="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/server/server/player.cpp" line="3" column="9"/>
+            <symbol>Player::pobednik</symbol>
+        </error>
+        <error id="bitwiseOnBoolean" severity="style" msg="Boolean expression &apos;player1-&gt;podrunda_time!=-1&apos; is used in bitwise operation. Did you mean &apos;&amp;&amp;&apos;?" verbose="Boolean expression &apos;player1-&gt;podrunda_time!=-1&apos; is used in bitwise operation. Did you mean &apos;&amp;&amp;&apos;?" cwe="398" inconclusive="true">
+            <location file="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/server/server/session.cpp" line="431" column="38"/>
+        </error>
+        <error id="bitwiseOnBoolean" severity="style" msg="Boolean expression &apos;player1-&gt;podrunda_guess!=-1&apos; is used in bitwise operation. Did you mean &apos;&amp;&amp;&apos;?" verbose="Boolean expression &apos;player1-&gt;podrunda_guess!=-1&apos; is used in bitwise operation. Did you mean &apos;&amp;&amp;&apos;?" cwe="398" inconclusive="true">
+            <location file="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/server/server/session.cpp" line="431" column="69"/>
+        </error>
+        <error id="bitwiseOnBoolean" severity="style" msg="Boolean expression &apos;player2-&gt;podrunda_guess!=-1&apos; is used in bitwise operation. Did you mean &apos;&amp;&amp;&apos;?" verbose="Boolean expression &apos;player2-&gt;podrunda_guess!=-1&apos; is used in bitwise operation. Did you mean &apos;&amp;&amp;&apos;?" cwe="398" inconclusive="true">
+            <location file="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/server/server/session.cpp" line="431" column="101"/>
+        </error>
+        <error id="bitwiseOnBoolean" severity="style" msg="Boolean expression &apos;player1-&gt;podrunda_resenje!=-1&apos; is used in bitwise operation. Did you mean &apos;&amp;&amp;&apos;?" verbose="Boolean expression &apos;player1-&gt;podrunda_resenje!=-1&apos; is used in bitwise operation. Did you mean &apos;&amp;&amp;&apos;?" cwe="398" inconclusive="true">
+            <location file="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/server/server/session.cpp" line="431" column="133"/>
+        </error>
+        <error id="bitwiseOnBoolean" severity="style" msg="Boolean expression &apos;player2-&gt;podrunda_resenje!=-1&apos; is used in bitwise operation. Did you mean &apos;&amp;&amp;&apos;?" verbose="Boolean expression &apos;player2-&gt;podrunda_resenje!=-1&apos; is used in bitwise operation. Did you mean &apos;&amp;&amp;&apos;?" cwe="398" inconclusive="true">
+            <location file="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/server/server/session.cpp" line="431" column="167"/>
+        </error>
+        <error id="bitwiseOnBoolean" severity="style" msg="Boolean expression &apos;player1-&gt;pobednik&apos; is used in bitwise operation. Did you mean &apos;&amp;&amp;&apos;?" verbose="Boolean expression &apos;player1-&gt;pobednik&apos; is used in bitwise operation. Did you mean &apos;&amp;&amp;&apos;?" cwe="398" inconclusive="true">
+            <location file="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/server/server/session.cpp" line="436" column="30"/>
+        </error>
+        <error id="bitwiseOnBoolean" severity="style" msg="Boolean expression &apos;player1-&gt;pobednik&apos; is used in bitwise operation. Did you mean &apos;&amp;&amp;&apos;?" verbose="Boolean expression &apos;player1-&gt;pobednik&apos; is used in bitwise operation. Did you mean &apos;&amp;&amp;&apos;?" cwe="398" inconclusive="true">
+            <location file="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/server/server/session.cpp" line="441" column="35"/>
+        </error>
+        <error id="bitwiseOnBoolean" severity="style" msg="Boolean expression &apos;!player1-&gt;pobednik&apos; is used in bitwise operation. Did you mean &apos;&amp;&amp;&apos;?" verbose="Boolean expression &apos;!player1-&gt;pobednik&apos; is used in bitwise operation. Did you mean &apos;&amp;&amp;&apos;?" cwe="398" inconclusive="true">
+            <location file="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/server/server/session.cpp" line="445" column="36"/>
+        </error>
+        <error id="bitwiseOnBoolean" severity="style" msg="Boolean expression &apos;player1-&gt;podrunda_guess==-2&apos; is used in bitwise operation. Did you mean &apos;&amp;&amp;&apos;?" verbose="Boolean expression &apos;player1-&gt;podrunda_guess==-2&apos; is used in bitwise operation. Did you mean &apos;&amp;&amp;&apos;?" cwe="398" inconclusive="true">
+            <location file="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/server/server/session.cpp" line="451" column="43"/>
+        </error>
+        <error id="bitwiseOnBoolean" severity="style" msg="Boolean expression &apos;answer1==&quot;true&quot;&apos; is used in bitwise operation. Did you mean &apos;&amp;&amp;&apos;?" verbose="Boolean expression &apos;answer1==&quot;true&quot;&apos; is used in bitwise operation. Did you mean &apos;&amp;&amp;&apos;?" cwe="398" inconclusive="true">
+            <location file="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/server/server/session.cpp" line="773" column="31"/>
+        </error>
+        <error id="useInitializationList" severity="performance" msg="Variable &apos;reckoWords&apos; is assigned in constructor body. Consider performing initialization in initialization list." verbose="When an object of a class is created, the constructors of all member variables are called consecutively in the order the variables are declared, even if you don&apos;t explicitly write them to the initialization list. You could avoid assigning &apos;reckoWords&apos; a value by passing the value to the constructor in the initialization list." cwe="398">
+            <location file="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/server/server/session.cpp" line="13" column="5"/>
+            <symbol>reckoWords</symbol>
+        </error>
+        <error id="clarifyCondition" severity="style" msg="Boolean result is used in bitwise operation. Clarify expression with parentheses." verbose="Suspicious expression. Boolean result is used in bitwise operation. The operator &apos;!&apos; and the comparison operators have higher precedence than bitwise operators. It is recommended that the expression is clarified with parentheses." cwe="398">
+            <location file="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/server/server/session.cpp" line="431" column="38"/>
+        </error>
+        <error id="clarifyCondition" severity="style" msg="Boolean result is used in bitwise operation. Clarify expression with parentheses." verbose="Suspicious expression. Boolean result is used in bitwise operation. The operator &apos;!&apos; and the comparison operators have higher precedence than bitwise operators. It is recommended that the expression is clarified with parentheses." cwe="398">
+            <location file="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/server/server/session.cpp" line="441" column="35"/>
+        </error>
+        <error id="clarifyCondition" severity="style" msg="Boolean result is used in bitwise operation. Clarify expression with parentheses." verbose="Suspicious expression. Boolean result is used in bitwise operation. The operator &apos;!&apos; and the comparison operators have higher precedence than bitwise operators. It is recommended that the expression is clarified with parentheses." cwe="398">
+            <location file="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/server/server/session.cpp" line="445" column="36"/>
+        </error>
+        <error id="clarifyCondition" severity="style" msg="Boolean result is used in bitwise operation. Clarify expression with parentheses." verbose="Suspicious expression. Boolean result is used in bitwise operation. The operator &apos;!&apos; and the comparison operators have higher precedence than bitwise operators. It is recommended that the expression is clarified with parentheses." cwe="398">
+            <location file="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/server/server/session.cpp" line="451" column="43"/>
+        </error>
+        <error id="clarifyCondition" severity="style" msg="Boolean result is used in bitwise operation. Clarify expression with parentheses." verbose="Suspicious expression. Boolean result is used in bitwise operation. The operator &apos;!&apos; and the comparison operators have higher precedence than bitwise operators. It is recommended that the expression is clarified with parentheses." cwe="398">
+            <location file="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/server/server/session.cpp" line="773" column="31"/>
+        </error>
+        <error id="duplicateExpression" severity="style" msg="Same expression on both sides of &apos;!=&apos;." verbose="Finding the same expression on both sides of an operator is suspicious and might indicate a cut and paste or logic error. Please examine this code carefully to determine if it is correct." cwe="398">
+            <location file="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/server/server/session.cpp" line="771" column="34"/>
+        </error>
+        <error id="shadowVariable" severity="style" msg="Local variable &apos;pobednik&apos; shadows outer variable" verbose="Local variable &apos;pobednik&apos; shadows outer variable" cwe="398">
+            <location file="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/server/server/session.cpp" line="475" column="25" info="Shadow variable"/>
+            <location file="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/server/server/session.cpp" line="434" column="17" info="Shadowed declaration"/>
+            <symbol>pobednik</symbol>
+        </error>
+        <error id="shadowVariable" severity="style" msg="Local variable &apos;pobednik&apos; shadows outer variable" verbose="Local variable &apos;pobednik&apos; shadows outer variable" cwe="398">
+            <location file="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/server/server/session.cpp" line="482" column="25" info="Shadow variable"/>
+            <location file="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/server/server/session.cpp" line="434" column="17" info="Shadowed declaration"/>
+            <symbol>pobednik</symbol>
+        </error>
+        <error id="shadowVariable" severity="style" msg="Local variable &apos;pobednik&apos; shadows outer variable" verbose="Local variable &apos;pobednik&apos; shadows outer variable" cwe="398">
+            <location file="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/server/server/session.cpp" line="489" column="25" info="Shadow variable"/>
+            <location file="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/server/server/session.cpp" line="434" column="17" info="Shadowed declaration"/>
+            <symbol>pobednik</symbol>
+        </error>
+        <error id="shadowVariable" severity="style" msg="Local variable &apos;pobednik&apos; shadows outer variable" verbose="Local variable &apos;pobednik&apos; shadows outer variable" cwe="398">
+            <location file="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/server/server/session.cpp" line="496" column="25" info="Shadow variable"/>
+            <location file="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/server/server/session.cpp" line="434" column="17" info="Shadowed declaration"/>
+            <symbol>pobednik</symbol>
+        </error>
+        <error id="unreadVariable" severity="style" msg="Variable &apos;answer1&apos; is assigned a value that is never used." verbose="Variable &apos;answer1&apos; is assigned a value that is never used." cwe="563">
+            <location file="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/server/server/session.cpp" line="24" column="21"/>
+            <symbol>answer1</symbol>
+        </error>
+        <error id="unreadVariable" severity="style" msg="Variable &apos;answer2&apos; is assigned a value that is never used." verbose="Variable &apos;answer2&apos; is assigned a value that is never used." cwe="563">
+            <location file="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/server/server/session.cpp" line="25" column="21"/>
+            <symbol>answer2</symbol>
+        </error>
+        <error id="unreadVariable" severity="style" msg="Variable &apos;pitanjce&apos; is assigned a value that is never used." verbose="Variable &apos;pitanjce&apos; is assigned a value that is never used." cwe="563">
+            <location file="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/server/server/session.cpp" line="880" column="30"/>
+            <symbol>pitanjce</symbol>
+        </error>
+        <error id="toomanyconfigs" severity="information" msg="Too many #ifdef configurations - cppcheck only checks 12 of 109 configurations. Use --force to check all configurations." verbose="The checking of the file will be interrupted because there are too many #ifdef configurations. Checking of all #ifdef configurations can be forced by --force command line option or from GUI preferences. However that may increase the checking time." cwe="398">
+            <location file="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/tests/tests/koznaTest.cpp" line="0" column="0"/>
+        </error>
+        <error id="preprocessorErrorDirective" severity="error" msg="failed to expand &apos;REQUIRE&apos;, Invalid ## usage when expanding &apos;INTERNAL_CATCH_TEST&apos;." verbose="failed to expand &apos;REQUIRE&apos;, Invalid ## usage when expanding &apos;INTERNAL_CATCH_TEST&apos;.">
+            <location file="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/tests/tests/catch.hpp" line="2704" column="0"/>
+        </error>
+        <error id="toomanyconfigs" severity="information" msg="Too many #ifdef configurations - cppcheck only checks 12 of 108 configurations. Use --force to check all configurations." verbose="The checking of the file will be interrupted because there are too many #ifdef configurations. Checking of all #ifdef configurations can be forced by --force command line option or from GUI preferences. However that may increase the checking time." cwe="398">
+            <location file="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/tests/tests/main.cpp" line="0" column="0"/>
+        </error>
+        <error id="useInitializationList" severity="performance" msg="Variable &apos;m_ref&apos; is assigned in constructor body. Consider performing initialization in initialization list." verbose="When an object of a class is created, the constructors of all member variables are called consecutively in the order the variables are declared, even if you don&apos;t explicitly write them to the initialization list. You could avoid assigning &apos;m_ref&apos; a value by passing the value to the constructor in the initialization list." cwe="398">
+            <location file0="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/tests/tests/main.cpp" file="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/tests/tests/catch.hpp" line="9309" column="13"/>
+            <symbol>m_ref</symbol>
+        </error>
+        <error id="useInitializationList" severity="performance" msg="Variable &apos;m_ref&apos; is assigned in constructor body. Consider performing initialization in initialization list." verbose="When an object of a class is created, the constructors of all member variables are called consecutively in the order the variables are declared, even if you don&apos;t explicitly write them to the initialization list. You could avoid assigning &apos;m_ref&apos; a value by passing the value to the constructor in the initialization list." cwe="398">
+            <location file0="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/tests/tests/main.cpp" file="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/tests/tests/catch.hpp" line="9314" column="13"/>
+            <symbol>m_ref</symbol>
+        </error>
+        <error id="functionConst" severity="style" msg="Technically the member function &apos;Catch::ReusableStringStream::get&apos; can be const." verbose="The member function &apos;Catch::ReusableStringStream::get&apos; can be made a const function. Making this function &apos;const&apos; should not cause compiler errors. Even though the function can be made const function technically it may not make sense conceptually. Think about your design and the task of the function first - is it a function that must not change object internal state?" cwe="398" inconclusive="true">
+            <location file0="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/tests/tests/main.cpp" file="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/tests/tests/catch.hpp" line="1455" column="14"/>
+            <symbol>Catch::ReusableStringStream::get</symbol>
+        </error>
+        <error id="functionConst" severity="style" msg="Technically the member function &apos;Catch::Decomposer::operator&lt;=&apos; can be const." verbose="The member function &apos;Catch::Decomposer::operator&lt;=&apos; can be made a const function. Making this function &apos;const&apos; should not cause compiler errors. Even though the function can be made const function technically it may not make sense conceptually. Think about your design and the task of the function first - is it a function that must not change object internal state?" cwe="398" inconclusive="true">
+            <location file0="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/tests/tests/main.cpp" file="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/tests/tests/catch.hpp" line="2417" column="14"/>
+            <symbol>Catch::Decomposer::operator&lt;=</symbol>
+        </error>
+        <error id="functionConst" severity="style" msg="Technically the member function &apos;Catch::Decomposer::operator&lt;=&apos; can be const." verbose="The member function &apos;Catch::Decomposer::operator&lt;=&apos; can be made a const function. Making this function &apos;const&apos; should not cause compiler errors. Even though the function can be made const function technically it may not make sense conceptually. Think about your design and the task of the function first - is it a function that must not change object internal state?" cwe="398" inconclusive="true">
+            <location file0="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/tests/tests/main.cpp" file="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/tests/tests/catch.hpp" line="2421" column="14"/>
+            <symbol>Catch::Decomposer::operator&lt;=</symbol>
+        </error>
+        <error id="functionStatic" severity="performance" msg="Technically the member function &apos;Catch::AssertionHandler::allowThrows&apos; can be static (but you may consider moving to unnamed namespace)." verbose="The member function &apos;Catch::AssertionHandler::allowThrows&apos; can be made a static function. Making a function static can bring a performance benefit since no &apos;this&apos; instance is passed to the function. This change should not cause compiler errors but it does not necessarily make sense conceptually. Think about your design and the task of the function first - is it a function that must not access members of class instances? And maybe it is more appropriate to move this function to a unnamed namespace." cwe="398" inconclusive="true">
+            <location file0="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/tests/tests/main.cpp" file="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/tests/tests/catch.hpp" line="2585" column="14"/>
+            <location file0="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/tests/tests/main.cpp" file="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/tests/tests/catch.hpp" line="8234" column="28"/>
+            <symbol>Catch::AssertionHandler::allowThrows</symbol>
+        </error>
+        <error id="functionConst" severity="style" msg="Technically the member function &apos;Catch::Detail::Approx::operator()&apos; can be const." verbose="The member function &apos;Catch::Detail::Approx::operator()&apos; can be made a const function. Making this function &apos;const&apos; should not cause compiler errors. Even though the function can be made const function technically it may not make sense conceptually. Think about your design and the task of the function first - is it a function that must not change object internal state?" cwe="398" inconclusive="true">
+            <location file0="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/tests/tests/main.cpp" file="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/tests/tests/catch.hpp" line="3097" column="16"/>
+            <symbol>Catch::Detail::Approx::operator()</symbol>
+        </error>
+        <error id="functionStatic" severity="performance" msg="Technically the member function &apos;Catch::FatalConditionHandler::engage_platform&apos; can be static (but you may consider moving to unnamed namespace)." verbose="The member function &apos;Catch::FatalConditionHandler::engage_platform&apos; can be made a static function. Making a function static can bring a performance benefit since no &apos;this&apos; instance is passed to the function. This change should not cause compiler errors but it does not necessarily make sense conceptually. Think about your design and the task of the function first - is it a function that must not access members of class instances? And maybe it is more appropriate to move this function to a unnamed namespace." cwe="398" inconclusive="true">
+            <location file0="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/tests/tests/main.cpp" file="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/tests/tests/catch.hpp" line="8013" column="14"/>
+            <location file0="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/tests/tests/main.cpp" file="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/tests/tests/catch.hpp" line="10934" column="33"/>
+            <symbol>Catch::FatalConditionHandler::engage_platform</symbol>
+        </error>
+        <error id="functionStatic" severity="performance" msg="Technically the member function &apos;Catch::FatalConditionHandler::disengage_platform&apos; can be static (but you may consider moving to unnamed namespace)." verbose="The member function &apos;Catch::FatalConditionHandler::disengage_platform&apos; can be made a static function. Making a function static can bring a performance benefit since no &apos;this&apos; instance is passed to the function. This change should not cause compiler errors but it does not necessarily make sense conceptually. Think about your design and the task of the function first - is it a function that must not access members of class instances? And maybe it is more appropriate to move this function to a unnamed namespace." cwe="398" inconclusive="true">
+            <location file0="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/tests/tests/main.cpp" file="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/tests/tests/catch.hpp" line="8014" column="14"/>
+            <location file0="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/tests/tests/main.cpp" file="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/tests/tests/catch.hpp" line="10953" column="33"/>
+            <symbol>Catch::FatalConditionHandler::disengage_platform</symbol>
+        </error>
+        <error id="functionConst" severity="style" msg="Technically the member function &apos;Catch::clara::TextFlow::Column::operator+&apos; can be const." verbose="The member function &apos;Catch::clara::TextFlow::Column::operator+&apos; can be made a const function. Making this function &apos;const&apos; should not cause compiler errors. Even though the function can be made const function technically it may not make sense conceptually. Think about your design and the task of the function first - is it a function that must not change object internal state?" cwe="398" inconclusive="true">
+            <location file0="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/tests/tests/main.cpp" file="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/tests/tests/catch.hpp" line="8649" column="10"/>
+            <location file0="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/tests/tests/main.cpp" file="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/tests/tests/catch.hpp" line="8776" column="21"/>
+            <symbol>Catch::clara::TextFlow::Column::operator+</symbol>
+        </error>
+        <error id="functionConst" severity="style" msg="Technically the member function &apos;Catch::clara::TextFlow::Columns::operator+&apos; can be const." verbose="The member function &apos;Catch::clara::TextFlow::Columns::operator+&apos; can be made a const function. Making this function &apos;const&apos; should not cause compiler errors. Even though the function can be made const function technically it may not make sense conceptually. Think about your design and the task of the function first - is it a function that must not change object internal state?" cwe="398" inconclusive="true">
+            <location file0="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/tests/tests/main.cpp" file="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/tests/tests/catch.hpp" line="8750" column="10"/>
+            <symbol>Catch::clara::TextFlow::Columns::operator+</symbol>
+        </error>
+        <error id="functionConst" severity="style" msg="Technically the member function &apos;Catch::clara::detail::Parser::operator|=&apos; can be const." verbose="The member function &apos;Catch::clara::detail::Parser::operator|=&apos; can be made a const function. Making this function &apos;const&apos; should not cause compiler errors. Even though the function can be made const function technically it may not make sense conceptually. Think about your design and the task of the function first - is it a function that must not change object internal state?" cwe="398" inconclusive="true">
+            <location file0="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/tests/tests/main.cpp" file="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/tests/tests/catch.hpp" line="9493" column="14"/>
+            <symbol>Catch::clara::detail::Parser::operator|=</symbol>
+        </error>
+        <error id="functionStatic" severity="performance" msg="Technically the member function &apos;Catch::ExceptionTranslatorRegistry::tryTranslators&apos; can be static (but you may consider moving to unnamed namespace)." verbose="The member function &apos;Catch::ExceptionTranslatorRegistry::tryTranslators&apos; can be made a static function. Making a function static can bring a performance benefit since no &apos;this&apos; instance is passed to the function. This change should not cause compiler errors but it does not necessarily make sense conceptually. Think about your design and the task of the function first - is it a function that must not access members of class instances? And maybe it is more appropriate to move this function to a unnamed namespace." cwe="398" inconclusive="true">
+            <location file0="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/tests/tests/main.cpp" file="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/tests/tests/catch.hpp" line="10667" column="21"/>
+            <location file0="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/tests/tests/main.cpp" file="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/tests/tests/catch.hpp" line="10744" column="46"/>
+            <symbol>Catch::ExceptionTranslatorRegistry::tryTranslators</symbol>
+        </error>
+        <error id="functionStatic" severity="performance" msg="Technically the member function &apos;Catch::Session::libIdentify&apos; can be static (but you may consider moving to unnamed namespace)." verbose="The member function &apos;Catch::Session::libIdentify&apos; can be made a static function. Making a function static can bring a performance benefit since no &apos;this&apos; instance is passed to the function. This change should not cause compiler errors but it does not necessarily make sense conceptually. Think about your design and the task of the function first - is it a function that must not access members of class instances? And maybe it is more appropriate to move this function to a unnamed namespace." cwe="398" inconclusive="true">
+            <location file0="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/tests/tests/main.cpp" file="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/tests/tests/catch.hpp" line="13219" column="14"/>
+            <location file0="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/tests/tests/main.cpp" file="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/tests/tests/catch.hpp" line="13445" column="19"/>
+            <symbol>Catch::Session::libIdentify</symbol>
+        </error>
+        <error id="functionConst" severity="style" msg="Technically the member function &apos;Catch::Detail::::OutputDebugWriter::operator()&apos; can be const." verbose="The member function &apos;Catch::Detail::::OutputDebugWriter::operator()&apos; can be made a const function. Making this function &apos;const&apos; should not cause compiler errors. Even though the function can be made const function technically it may not make sense conceptually. Think about your design and the task of the function first - is it a function that must not change object internal state?" cwe="398" inconclusive="true">
+            <location file0="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/tests/tests/main.cpp" file="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/tests/tests/catch.hpp" line="13680" column="18"/>
+            <symbol>Catch::Detail::::OutputDebugWriter::operator()</symbol>
+        </error>
+        <error id="virtualCallInConstructor" severity="warning" msg="Virtual function &apos;next&apos; is called from constructor &apos;FilterGenerator(P&amp;&amp;pred,GeneratorWrapper&lt;T&gt;&amp;&amp;generator)&apos; at line 4169. Dynamic binding is not used." verbose="Virtual function &apos;next&apos; is called from constructor &apos;FilterGenerator(P&amp;&amp;pred,GeneratorWrapper&lt;T&gt;&amp;&amp;generator)&apos; at line 4169. Dynamic binding is not used.">
+            <location file0="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/tests/tests/main.cpp" file="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/tests/tests/catch.hpp" line="4180" column="14" info="next is a virtual function"/>
+            <location file0="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/tests/tests/main.cpp" file="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/tests/tests/catch.hpp" line="4169" column="42" info="Calling next"/>
+        </error>
+        <error id="virtualCallInConstructor" severity="warning" msg="Virtual function &apos;next&apos; is called from constructor &apos;RandomFloatingGenerator(Float a,Float b)&apos; at line 4608. Dynamic binding is not used." verbose="Virtual function &apos;next&apos; is called from constructor &apos;RandomFloatingGenerator(Float a,Float b)&apos; at line 4608. Dynamic binding is not used.">
+            <location file0="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/tests/tests/main.cpp" file="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/tests/tests/catch.hpp" line="4614" column="10" info="next is a virtual function"/>
+            <location file0="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/tests/tests/main.cpp" file="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/tests/tests/catch.hpp" line="4608" column="27" info="Calling next"/>
+        </error>
+        <error id="virtualCallInConstructor" severity="warning" msg="Virtual function &apos;next&apos; is called from constructor &apos;RandomIntegerGenerator(Integer a,Integer b)&apos; at line 4630. Dynamic binding is not used." verbose="Virtual function &apos;next&apos; is called from constructor &apos;RandomIntegerGenerator(Integer a,Integer b)&apos; at line 4630. Dynamic binding is not used.">
+            <location file0="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/tests/tests/main.cpp" file="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/tests/tests/catch.hpp" line="4636" column="10" info="next is a virtual function"/>
+            <location file0="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/tests/tests/main.cpp" file="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/tests/tests/catch.hpp" line="4630" column="27" info="Calling next"/>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Class &apos;StringRef&apos; has a constructor with 1 argument that is not explicit." verbose="Class &apos;StringRef&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/tests/tests/main.cpp" file="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/tests/tests/catch.hpp" line="621" column="9"/>
+            <symbol>StringRef</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Class &apos;StringRef&apos; has a constructor with 1 argument that is not explicit." verbose="Class &apos;StringRef&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/tests/tests/main.cpp" file="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/tests/tests/catch.hpp" line="628" column="9"/>
+            <symbol>StringRef</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Class &apos;LazyExpression&apos; has a constructor with 1 argument that is not explicit." verbose="Class &apos;LazyExpression&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/tests/tests/main.cpp" file="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/tests/tests/catch.hpp" line="2535" column="9"/>
+            <symbol>LazyExpression</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Class &apos;Section&apos; has a constructor with 1 argument that is not explicit." verbose="Class &apos;Section&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/tests/tests/main.cpp" file="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/tests/tests/catch.hpp" line="2914" column="9"/>
+            <symbol>Section</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Class &apos;ExceptionTranslatorRegistrar&apos; has a constructor with 1 argument that is not explicit." verbose="Class &apos;ExceptionTranslatorRegistrar&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/tests/tests/main.cpp" file="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/tests/tests/catch.hpp" line="3053" column="9"/>
+            <symbol>ExceptionTranslatorRegistrar</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Class &apos;ExceptionMessageMatcher&apos; has a constructor with 1 argument that is not explicit." verbose="Class &apos;ExceptionMessageMatcher&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/tests/tests/main.cpp" file="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/tests/tests/catch.hpp" line="3404" column="5"/>
+            <symbol>ExceptionMessageMatcher</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Struct &apos;EqualsMatcher&apos; has a constructor with 1 argument that is not explicit." verbose="Struct &apos;EqualsMatcher&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/tests/tests/main.cpp" file="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/tests/tests/catch.hpp" line="3558" column="13"/>
+            <symbol>EqualsMatcher</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Struct &apos;ContainsMatcher&apos; has a constructor with 1 argument that is not explicit." verbose="Struct &apos;ContainsMatcher&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/tests/tests/main.cpp" file="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/tests/tests/catch.hpp" line="3562" column="13"/>
+            <symbol>ContainsMatcher</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Struct &apos;StartsWithMatcher&apos; has a constructor with 1 argument that is not explicit." verbose="Struct &apos;StartsWithMatcher&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/tests/tests/main.cpp" file="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/tests/tests/catch.hpp" line="3566" column="13"/>
+            <symbol>StartsWithMatcher</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Struct &apos;EndsWithMatcher&apos; has a constructor with 1 argument that is not explicit." verbose="Struct &apos;EndsWithMatcher&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/tests/tests/main.cpp" file="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/tests/tests/catch.hpp" line="3570" column="13"/>
+            <symbol>EndsWithMatcher</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Struct &apos;ContainsElementMatcher&apos; has a constructor with 1 argument that is not explicit." verbose="Struct &apos;ContainsElementMatcher&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/tests/tests/main.cpp" file="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/tests/tests/catch.hpp" line="3610" column="13"/>
+            <symbol>ContainsElementMatcher</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Struct &apos;ContainsMatcher&apos; has a constructor with 1 argument that is not explicit." verbose="Struct &apos;ContainsMatcher&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/tests/tests/main.cpp" file="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/tests/tests/catch.hpp" line="3631" column="13"/>
+            <symbol>ContainsMatcher</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Struct &apos;EqualsMatcher&apos; has a constructor with 1 argument that is not explicit." verbose="Struct &apos;EqualsMatcher&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/tests/tests/main.cpp" file="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/tests/tests/catch.hpp" line="3661" column="13"/>
+            <symbol>EqualsMatcher</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Struct &apos;ApproxMatcher&apos; has a constructor with 1 argument that is not explicit." verbose="Struct &apos;ApproxMatcher&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/tests/tests/main.cpp" file="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/tests/tests/catch.hpp" line="3684" column="13"/>
+            <symbol>ApproxMatcher</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Struct &apos;UnorderedEqualsMatcher&apos; has a constructor with 1 argument that is not explicit." verbose="Struct &apos;UnorderedEqualsMatcher&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/tests/tests/main.cpp" file="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/tests/tests/catch.hpp" line="3719" column="13"/>
+            <symbol>UnorderedEqualsMatcher</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Class &apos;GeneratorException&apos; has a constructor with 1 argument that is not explicit." verbose="Class &apos;GeneratorException&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/tests/tests/main.cpp" file="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/tests/tests/catch.hpp" line="3924" column="5"/>
+            <symbol>GeneratorException</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Class &apos;SingleValueGenerator&apos; has a constructor with 1 argument that is not explicit." verbose="Class &apos;SingleValueGenerator&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/tests/tests/main.cpp" file="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/tests/tests/catch.hpp" line="3957" column="9"/>
+            <symbol>SingleValueGenerator</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Class &apos;FixedValuesGenerator&apos; has a constructor with 1 argument that is not explicit." verbose="Class &apos;FixedValuesGenerator&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/tests/tests/main.cpp" file="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/tests/tests/catch.hpp" line="3975" column="9"/>
+            <symbol>FixedValuesGenerator</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Class &apos;GeneratorWrapper&apos; has a constructor with 1 argument that is not explicit." verbose="Class &apos;GeneratorWrapper&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/tests/tests/main.cpp" file="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/tests/tests/catch.hpp" line="3990" column="9"/>
+            <symbol>GeneratorWrapper</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Class &apos;Generators&apos; has a constructor with 1 argument that is not explicit." verbose="Class &apos;Generators&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/tests/tests/main.cpp" file="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/tests/tests/catch.hpp" line="4033" column="9"/>
+            <symbol>Generators</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Class &apos;TestSpecParser&apos; has a constructor with 1 argument that is not explicit." verbose="Class &apos;TestSpecParser&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/tests/tests/main.cpp" file="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/tests/tests/catch.hpp" line="5213" column="9"/>
+            <symbol>TestSpecParser</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Class &apos;Config&apos; has a constructor with 1 argument that is not explicit." verbose="Class &apos;Config&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/tests/tests/main.cpp" file="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/tests/tests/catch.hpp" line="5317" column="9"/>
+            <symbol>Config</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Struct &apos;TestRunInfo&apos; has a constructor with 1 argument that is not explicit." verbose="Struct &apos;TestRunInfo&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/tests/tests/main.cpp" file="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/tests/tests/catch.hpp" line="5510" column="9"/>
+            <symbol>TestRunInfo</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Struct &apos;TestGroupStats&apos; has a constructor with 1 argument that is not explicit." verbose="Struct &apos;TestGroupStats&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/tests/tests/main.cpp" file="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/tests/tests/catch.hpp" line="5580" column="9"/>
+            <symbol>TestGroupStats</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Struct &apos;TestEventListenerBase&apos; has a constructor with 1 argument that is not explicit." verbose="Struct &apos;TestEventListenerBase&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/tests/tests/main.cpp" file="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/tests/tests/catch.hpp" line="5971" column="9"/>
+            <symbol>TestEventListenerBase</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Struct &apos;Colour&apos; has a constructor with 1 argument that is not explicit." verbose="Struct &apos;Colour&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/tests/tests/main.cpp" file="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/tests/tests/catch.hpp" line="6024" column="9"/>
+            <symbol>Colour</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Struct &apos;ConsoleReporter&apos; has a constructor with 1 argument that is not explicit." verbose="Struct &apos;ConsoleReporter&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/tests/tests/main.cpp" file="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/tests/tests/catch.hpp" line="6154" column="9"/>
+            <symbol>ConsoleReporter</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Class &apos;XmlEncode&apos; has a constructor with 1 argument that is not explicit." verbose="Class &apos;XmlEncode&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/tests/tests/main.cpp" file="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/tests/tests/catch.hpp" line="6234" column="9"/>
+            <symbol>XmlEncode</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Class &apos;JunitReporter&apos; has a constructor with 1 argument that is not explicit." verbose="Class &apos;JunitReporter&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/tests/tests/main.cpp" file="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/tests/tests/catch.hpp" line="6325" column="9"/>
+            <symbol>JunitReporter</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Class &apos;XmlReporter&apos; has a constructor with 1 argument that is not explicit." verbose="Class &apos;XmlReporter&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/tests/tests/main.cpp" file="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/tests/tests/catch.hpp" line="6374" column="9"/>
+            <symbol>XmlReporter</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Class &apos;FatalConditionHandlerGuard&apos; has a constructor with 1 argument that is not explicit." verbose="Class &apos;FatalConditionHandlerGuard&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/tests/tests/main.cpp" file="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/tests/tests/catch.hpp" line="8037" column="9"/>
+            <symbol>FatalConditionHandlerGuard</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Class &apos;Args&apos; has a constructor with 1 argument that is not explicit." verbose="Class &apos;Args&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/tests/tests/main.cpp" file="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/tests/tests/catch.hpp" line="8832" column="9"/>
+            <symbol>Args</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Struct &apos;Help&apos; has a constructor with 1 argument that is not explicit." verbose="Struct &apos;Help&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/tests/tests/main.cpp" file="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/tests/tests/catch.hpp" line="9474" column="9"/>
+            <symbol>Help</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Class &apos;TestInvokerAsFunction&apos; has a constructor with 1 argument that is not explicit." verbose="Class &apos;TestInvokerAsFunction&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/tests/tests/main.cpp" file="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/tests/tests/catch.hpp" line="12316" column="9"/>
+            <symbol>TestInvokerAsFunction</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Class &apos;FileStream&apos; has a constructor with 1 argument that is not explicit." verbose="Class &apos;FileStream&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/tests/tests/main.cpp" file="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/tests/tests/catch.hpp" line="13690" column="13"/>
+            <symbol>FileStream</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Struct &apos;MatchNotOf &lt; std :: string &gt;&apos; has a constructor with 1 argument that is not explicit." verbose="Struct &apos;MatchNotOf &lt; std :: string &gt;&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/tests/tests/main.cpp" file="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/tests/tests/catch.hpp" line="3359" column="13"/>
+            <symbol>MatchNotOf &lt; std :: string &gt;</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Struct &apos;MatchNotOf &lt; std &gt;&apos; has a constructor with 1 argument that is not explicit." verbose="Struct &apos;MatchNotOf &lt; std &gt;&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/tests/tests/main.cpp" file="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/tests/tests/catch.hpp" line="3359" column="13"/>
+            <symbol>MatchNotOf &lt; std &gt;</symbol>
+        </error>
+        <error id="missingOverride" severity="style" msg="The function &apos;isFlag&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier." verbose="The function &apos;isFlag&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier.">
+            <location file0="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/tests/tests/main.cpp" file="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/tests/tests/catch.hpp" line="9121" column="22" info="Function in derived class"/>
+            <location file0="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/tests/tests/main.cpp" file="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/tests/tests/catch.hpp" line="9114" column="22" info="Virtual function in base class"/>
+            <symbol>isFlag</symbol>
+        </error>
+        <error id="knownConditionTrueFalse" severity="style" msg="Condition &apos;!uncaught_exceptions()&apos; is always true" verbose="Condition &apos;!uncaught_exceptions()&apos; is always true" cwe="571">
+            <location file0="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/tests/tests/main.cpp" file="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/tests/tests/catch.hpp" line="11859" column="14" info="Condition &apos;!uncaught_exceptions()&apos; is always true"/>
+        </error>
+        <error id="knownConditionTrueFalse" severity="style" msg="Condition &apos;!uncaught_exceptions()&apos; is always true" verbose="Condition &apos;!uncaught_exceptions()&apos; is always true" cwe="571">
+            <location file0="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/tests/tests/main.cpp" file="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/tests/tests/catch.hpp" line="11922" column="14" info="Condition &apos;!uncaught_exceptions()&apos; is always true"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;makeTestInvoker&apos; argument 1 names different: declaration &apos;testAsFunction&apos; definition &apos;testAsMethod&apos;." verbose="Function &apos;makeTestInvoker&apos; argument 1 names different: declaration &apos;testAsFunction&apos; definition &apos;testAsMethod&apos;." cwe="628" inconclusive="true">
+            <location file0="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/tests/tests/main.cpp" file="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/tests/tests/catch.hpp" line="977" column="33"/>
+            <location file0="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/tests/tests/main.cpp" file="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/tests/tests/catch.hpp" line="974" column="29"/>
+            <symbol>makeTestInvoker</symbol>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;setMargin&apos; argument 1 names different: declaration &apos;margin&apos; definition &apos;newMargin&apos;." verbose="Function &apos;setMargin&apos; argument 1 names different: declaration &apos;margin&apos; definition &apos;newMargin&apos;." cwe="628" inconclusive="true">
+            <location file0="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/tests/tests/main.cpp" file="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/tests/tests/catch.hpp" line="7904" column="35"/>
+            <location file0="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/tests/tests/main.cpp" file="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/tests/tests/catch.hpp" line="3084" column="31"/>
+            <symbol>setMargin</symbol>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;setEpsilon&apos; argument 1 names different: declaration &apos;epsilon&apos; definition &apos;newEpsilon&apos;." verbose="Function &apos;setEpsilon&apos; argument 1 names different: declaration &apos;epsilon&apos; definition &apos;newEpsilon&apos;." cwe="628" inconclusive="true">
+            <location file0="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/tests/tests/main.cpp" file="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/tests/tests/catch.hpp" line="7911" column="36"/>
+            <location file0="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/tests/tests/main.cpp" file="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/tests/tests/catch.hpp" line="3087" column="32"/>
+            <symbol>setEpsilon</symbol>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;registerEnum&apos; argument 2 names different: declaration &apos;allEnums&apos; definition &apos;allValueNames&apos;." verbose="Function &apos;registerEnum&apos; argument 2 names different: declaration &apos;allEnums&apos; definition &apos;allValueNames&apos;." cwe="628" inconclusive="true">
+            <location file0="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/tests/tests/main.cpp" file="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/tests/tests/catch.hpp" line="10634" column="89"/>
+            <location file0="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/tests/tests/main.cpp" file="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/tests/tests/catch.hpp" line="10567" column="73"/>
+            <symbol>registerEnum</symbol>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;substr&apos; argument 2 names different: declaration &apos;length&apos; definition &apos;size&apos;." verbose="Function &apos;substr&apos; argument 2 names different: declaration &apos;length&apos; definition &apos;size&apos;." cwe="628" inconclusive="true">
+            <location file0="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/tests/tests/main.cpp" file="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/tests/tests/catch.hpp" line="13919" column="56"/>
+            <location file0="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/tests/tests/main.cpp" file="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/tests/tests/catch.hpp" line="664" column="49"/>
+            <symbol>substr</symbol>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;operator&lt;&lt;&apos; argument 2 names different: declaration &apos;sr&apos; definition &apos;str&apos;." verbose="Function &apos;operator&lt;&lt;&apos; argument 2 names different: declaration &apos;sr&apos; definition &apos;str&apos;." cwe="628" inconclusive="true">
+            <location file0="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/tests/tests/main.cpp" file="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/tests/tests/catch.hpp" line="13931" column="59"/>
+            <location file0="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/tests/tests/main.cpp" file="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/tests/tests/catch.hpp" line="679" column="59"/>
+            <symbol>operator&lt;&lt;</symbol>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;operator+=&apos; argument 2 names different: declaration &apos;sr&apos; definition &apos;rhs&apos;." verbose="Function &apos;operator+=&apos; argument 2 names different: declaration &apos;sr&apos; definition &apos;rhs&apos;." cwe="628" inconclusive="true">
+            <location file0="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/tests/tests/main.cpp" file="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/tests/tests/catch.hpp" line="13935" column="57"/>
+            <location file0="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/tests/tests/main.cpp" file="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/tests/tests/catch.hpp" line="678" column="59"/>
+            <symbol>operator+=</symbol>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;makeTestCase&apos; argument 1 names different: declaration &apos;testCase&apos; definition &apos;_testCase&apos;." verbose="Function &apos;makeTestCase&apos; argument 1 names different: declaration &apos;testCase&apos; definition &apos;_testCase&apos;." cwe="628" inconclusive="true">
+            <location file0="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/tests/tests/main.cpp" file="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/tests/tests/catch.hpp" line="14048" column="43"/>
+            <location file0="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/tests/tests/main.cpp" file="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/tests/tests/catch.hpp" line="4821" column="43"/>
+            <symbol>makeTestCase</symbol>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;makeTestCase&apos; argument 2 names different: declaration &apos;className&apos; definition &apos;_className&apos;." verbose="Function &apos;makeTestCase&apos; argument 2 names different: declaration &apos;className&apos; definition &apos;_className&apos;." cwe="628" inconclusive="true">
+            <location file0="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/tests/tests/main.cpp" file="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/tests/tests/catch.hpp" line="14049" column="48"/>
+            <location file0="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/tests/tests/main.cpp" file="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/tests/tests/catch.hpp" line="4822" column="48"/>
+            <symbol>makeTestCase</symbol>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;makeTestCase&apos; argument 4 names different: declaration &apos;lineInfo&apos; definition &apos;_lineInfo&apos;." verbose="Function &apos;makeTestCase&apos; argument 4 names different: declaration &apos;lineInfo&apos; definition &apos;_lineInfo&apos;." cwe="628" inconclusive="true">
+            <location file0="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/tests/tests/main.cpp" file="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/tests/tests/catch.hpp" line="14051" column="51"/>
+            <location file0="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/tests/tests/main.cpp" file="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/tests/tests/catch.hpp" line="4824" column="51"/>
+            <symbol>makeTestCase</symbol>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;testRunStarting&apos; argument 1 names different: declaration &apos;_testRunInfo&apos; definition &apos;_testInfo&apos;." verbose="Function &apos;testRunStarting&apos; argument 1 names different: declaration &apos;_testRunInfo&apos; definition &apos;_testInfo&apos;." cwe="628" inconclusive="true">
+            <location file0="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/tests/tests/main.cpp" file="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/tests/tests/catch.hpp" line="16591" column="58"/>
+            <location file0="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/tests/tests/main.cpp" file="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/tests/tests/catch.hpp" line="6179" column="49"/>
+            <symbol>testRunStarting</symbol>
+        </error>
+        <error id="shadowFunction" severity="style" msg="Local variable &apos;width&apos; shadows outer function" verbose="Local variable &apos;width&apos; shadows outer function" cwe="398">
+            <location file0="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/tests/tests/main.cpp" file="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/tests/tests/catch.hpp" line="8527" column="18" info="Shadow variable"/>
+            <location file0="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/tests/tests/main.cpp" file="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/tests/tests/catch.hpp" line="8619" column="10" info="Shadowed declaration"/>
+            <symbol>width</symbol>
+        </error>
+        <error id="constParameter" severity="style" msg="Parameter &apos;result&apos; can be declared with const" verbose="Parameter &apos;result&apos; can be declared with const" cwe="398">
+            <location file0="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/tests/tests/main.cpp" file="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/tests/tests/catch.hpp" line="15764" column="53"/>
+        </error>
+        <error id="useStlAlgorithm" severity="style" msg="Consider using std::transform algorithm instead of a raw loop." verbose="Consider using std::transform algorithm instead of a raw loop." cwe="398">
+            <location file0="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/tests/tests/main.cpp" file="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/tests/tests/catch.hpp" line="1488" column="27"/>
+        </error>
+        <error id="useStlAlgorithm" severity="style" msg="Consider using std::any_of algorithm instead of a raw loop." verbose="Consider using std::any_of algorithm instead of a raw loop." cwe="398">
+            <location file0="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/tests/tests/main.cpp" file="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/tests/tests/catch.hpp" line="3614" column="45"/>
+        </error>
+        <error id="useStlAlgorithm" severity="style" msg="Consider using std::any_of algorithm instead of a raw loop." verbose="Consider using std::any_of algorithm instead of a raw loop." cwe="398">
+            <location file0="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/tests/tests/main.cpp" file="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/tests/tests/catch.hpp" line="3640" column="47"/>
+        </error>
+        <error id="useStlAlgorithm" severity="style" msg="Consider using std::transform algorithm instead of a raw loop." verbose="Consider using std::transform algorithm instead of a raw loop." cwe="398">
+            <location file0="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/tests/tests/main.cpp" file="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/tests/tests/catch.hpp" line="8685" column="29"/>
+        </error>
+        <error id="useStlAlgorithm" severity="style" msg="Consider using std::transform algorithm instead of a raw loop." verbose="Consider using std::transform algorithm instead of a raw loop." cwe="398">
+            <location file0="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/tests/tests/main.cpp" file="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/tests/tests/catch.hpp" line="8701" column="29"/>
+        </error>
+        <error id="useStlAlgorithm" severity="style" msg="Consider using std::any_of algorithm instead of a raw loop." verbose="Consider using std::any_of algorithm instead of a raw loop." cwe="398">
+            <location file0="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/tests/tests/main.cpp" file="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/tests/tests/catch.hpp" line="9411" column="0"/>
+        </error>
+        <error id="useStlAlgorithm" severity="style" msg="Consider using std::accumulate algorithm instead of a raw loop." verbose="Consider using std::accumulate algorithm instead of a raw loop." cwe="398">
+            <location file0="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/tests/tests/main.cpp" file="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/tests/tests/catch.hpp" line="9562" column="26"/>
+        </error>
+        <error id="useStlAlgorithm" severity="style" msg="Consider using std::transform algorithm instead of a raw loop." verbose="Consider using std::transform algorithm instead of a raw loop." cwe="398">
+            <location file0="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/tests/tests/main.cpp" file="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/tests/tests/catch.hpp" line="10605" column="24"/>
+        </error>
+        <error id="useStlAlgorithm" severity="style" msg="Consider using std::find_if algorithm instead of a raw loop." verbose="Consider using std::find_if algorithm instead of a raw loop." cwe="398">
+            <location file0="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/tests/tests/main.cpp" file="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/tests/tests/catch.hpp" line="10614" column="0"/>
+        </error>
+        <error id="useStlAlgorithm" severity="style" msg="Consider using std::find_if algorithm instead of a raw loop." verbose="Consider using std::find_if algorithm instead of a raw loop." cwe="398">
+            <location file0="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/tests/tests/main.cpp" file="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/tests/tests/catch.hpp" line="10906" column="32"/>
+        </error>
+        <error id="useStlAlgorithm" severity="style" msg="Consider using std::accumulate algorithm instead of a raw loop." verbose="Consider using std::accumulate algorithm instead of a raw loop." cwe="398">
+            <location file0="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/tests/tests/main.cpp" file="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/tests/tests/catch.hpp" line="11313" column="18"/>
+        </error>
+        <error id="useStlAlgorithm" severity="style" msg="Consider using std::accumulate algorithm instead of a raw loop." verbose="Consider using std::accumulate algorithm instead of a raw loop." cwe="398">
+            <location file0="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/tests/tests/main.cpp" file="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/tests/tests/catch.hpp" line="11365" column="24"/>
+        </error>
+        <error id="useStlAlgorithm" severity="style" msg="Consider using std::accumulate algorithm instead of a raw loop." verbose="Consider using std::accumulate algorithm instead of a raw loop." cwe="398">
+            <location file0="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/tests/tests/main.cpp" file="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/tests/tests/catch.hpp" line="14142" column="23"/>
+        </error>
+        <error id="useStlAlgorithm" severity="style" msg="Consider using std::transform algorithm instead of a raw loop." verbose="Consider using std::transform algorithm instead of a raw loop." cwe="398">
+            <location file0="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/tests/tests/main.cpp" file="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/tests/tests/catch.hpp" line="14238" column="35"/>
+        </error>
+        <error id="useStlAlgorithm" severity="style" msg="Consider using std::transform algorithm instead of a raw loop." verbose="Consider using std::transform algorithm instead of a raw loop." cwe="398">
+            <location file0="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/tests/tests/main.cpp" file="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/tests/tests/catch.hpp" line="14253" column="28"/>
+        </error>
+        <error id="useStlAlgorithm" severity="style" msg="Consider using std::copy_if algorithm instead of a raw loop." verbose="Consider using std::copy_if algorithm instead of a raw loop." cwe="398">
+            <location file0="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/tests/tests/main.cpp" file="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/tests/tests/catch.hpp" line="14287" column="25"/>
+        </error>
+        <error id="useStlAlgorithm" severity="style" msg="Consider using std::accumulate algorithm instead of a raw loop." verbose="Consider using std::accumulate algorithm instead of a raw loop." cwe="398">
+            <location file0="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/tests/tests/main.cpp" file="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/tests/tests/catch.hpp" line="14666" column="18"/>
+        </error>
+        <error id="unreadVariable" severity="style" msg="Variable &apos;e&apos; is assigned a value that is never used." verbose="Variable &apos;e&apos; is assigned a value that is never used." cwe="563">
+            <location file0="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/tests/tests/main.cpp" file="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/tests/tests/catch.hpp" line="16907" column="36"/>
+            <symbol>e</symbol>
+        </error>
+        <error id="unreadVariable" severity="style" msg="Variable &apos;properties&apos; is assigned a value that is never used." verbose="Variable &apos;properties&apos; is assigned a value that is never used." cwe="563">
+            <location file0="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/tests/tests/main.cpp" file="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/tests/tests/catch.hpp" line="16923" column="29"/>
+            <symbol>properties</symbol>
+        </error>
+        <error id="unreadVariable" severity="style" msg="Variable &apos;e&apos; is assigned a value that is never used." verbose="Variable &apos;e&apos; is assigned a value that is never used." cwe="563">
+            <location file0="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/tests/tests/main.cpp" file="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/tests/tests/catch.hpp" line="16977" column="40"/>
+            <symbol>e</symbol>
+        </error>
+        <error id="unreadVariable" severity="style" msg="Variable &apos;e&apos; is assigned a value that is never used." verbose="Variable &apos;e&apos; is assigned a value that is never used." cwe="563">
+            <location file0="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/tests/tests/main.cpp" file="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/tests/tests/catch.hpp" line="17043" column="40"/>
+            <symbol>e</symbol>
+        </error>
+        <error id="syntaxError" severity="error" msg="syntax error" verbose="syntax error">
+            <location file0="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/tests/tests/main.cpp" file="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/tests/tests/catch.hpp" line="10693" column="13"/>
+        </error>
+        <error id="syntaxError" severity="error" msg="syntax error" verbose="syntax error">
+            <location file0="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/tests/tests/main.cpp" file="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/tests/tests/catch.hpp" line="1517" column="5"/>
+        </error>
+        <error id="toomanyconfigs" severity="information" msg="Too many #ifdef configurations - cppcheck only checks 12 of 109 configurations. Use --force to check all configurations." verbose="The checking of the file will be interrupted because there are too many #ifdef configurations. Checking of all #ifdef configurations can be forced by --force command line option or from GUI preferences. However that may increase the checking time." cwe="398">
+            <location file="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/tests/tests/memorijaTest.cpp" line="0" column="0"/>
+        </error>
+        <error id="toomanyconfigs" severity="information" msg="Too many #ifdef configurations - cppcheck only checks 12 of 109 configurations. Use --force to check all configurations." verbose="The checking of the file will be interrupted because there are too many #ifdef configurations. Checking of all #ifdef configurations can be forced by --force command line option or from GUI preferences. However that may increase the checking time." cwe="398">
+            <location file="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/tests/tests/mojbrojTest.cpp" line="0" column="0"/>
+        </error>
+        <error id="toomanyconfigs" severity="information" msg="Too many #ifdef configurations - cppcheck only checks 12 of 109 configurations. Use --force to check all configurations." verbose="The checking of the file will be interrupted because there are too many #ifdef configurations. Checking of all #ifdef configurations can be forced by --force command line option or from GUI preferences. However that may increase the checking time." cwe="398">
+            <location file="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/tests/tests/podrundaTest.cpp" line="0" column="0"/>
+        </error>
+        <error id="toomanyconfigs" severity="information" msg="Too many #ifdef configurations - cppcheck only checks 12 of 109 configurations. Use --force to check all configurations." verbose="The checking of the file will be interrupted because there are too many #ifdef configurations. Checking of all #ifdef configurations can be forced by --force command line option or from GUI preferences. However that may increase the checking time." cwe="398">
+            <location file="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/tests/tests/pogodistaTest.cpp" line="0" column="0"/>
+        </error>
+        <error id="toomanyconfigs" severity="information" msg="Too many #ifdef configurations - cppcheck only checks 12 of 109 configurations. Use --force to check all configurations." verbose="The checking of the file will be interrupted because there are too many #ifdef configurations. Checking of all #ifdef configurations can be forced by --force command line option or from GUI preferences. However that may increase the checking time." cwe="398">
+            <location file="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/tests/tests/reckoTest.cpp" line="0" column="0"/>
+        </error>
+        <error id="toomanyconfigs" severity="information" msg="Too many #ifdef configurations - cppcheck only checks 12 of 109 configurations. Use --force to check all configurations." verbose="The checking of the file will be interrupted because there are too many #ifdef configurations. Checking of all #ifdef configurations can be forced by --force command line option or from GUI preferences. However that may increase the checking time." cwe="398">
+            <location file="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/tests/tests/serverTest.cpp" line="0" column="0"/>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &apos;checkKoZnaSolution&apos; is never used." verbose="The function &apos;checkKoZnaSolution&apos; is never used." cwe="561">
+            <location file="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/server/server/session.cpp" line="988" column="0"/>
+            <symbol>checkKoZnaSolution</symbol>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &apos;getPlayers&apos; is never used." verbose="The function &apos;getPlayers&apos; is never used." cwe="561">
+            <location file="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/server/server/lobby.cpp" line="31" column="0"/>
+            <symbol>getPlayers</symbol>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &apos;onIsFinished&apos; is never used." verbose="The function &apos;onIsFinished&apos; is never used." cwe="561">
+            <location file="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/application/game.cpp" line="4" column="0"/>
+            <symbol>onIsFinished</symbol>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &apos;on_podrundaEnded&apos; is never used." verbose="The function &apos;on_podrundaEnded&apos; is never used." cwe="561">
+            <location file="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/application/pocetniekran.cpp" line="180" column="0"/>
+            <symbol>on_podrundaEnded</symbol>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &apos;printResults&apos; is never used." verbose="The function &apos;printResults&apos; is never used." cwe="561">
+            <location file="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/server/server/server.cpp" line="86" column="0"/>
+            <symbol>printResults</symbol>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &apos;setInfo&apos; is never used." verbose="The function &apos;setInfo&apos; is never used." cwe="561">
+            <location file="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/application/pogodista.cpp" line="26" column="0"/>
+            <symbol>setInfo</symbol>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &apos;setPlayer1&apos; is never used." verbose="The function &apos;setPlayer1&apos; is never used." cwe="561">
+            <location file="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/application/podrundaui.cpp" line="92" column="0"/>
+            <symbol>setPlayer1</symbol>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &apos;setPlayer2&apos; is never used." verbose="The function &apos;setPlayer2&apos; is never used." cwe="561">
+            <location file="/home/ivana/Desktop/VS/2024_Analysis_pobedi-me-ako-znas/pobedi-me-ako-znas/application/podrundaui.cpp" line="98" column="0"/>
+            <symbol>setPlayer2</symbol>
+        </error>
+        <error id="missingInclude" severity="information" msg="Cppcheck cannot find all the include files (use --check-config for details)" verbose="Cppcheck cannot find all the include files. Cppcheck can check the code without the include files found. But the results will probably be more accurate if all the include files are found. Please check your project&apos;s include directories and add all of them as include directories for Cppcheck. To see what files Cppcheck cannot find use --check-config."/>
+    </errors>
+</results>
