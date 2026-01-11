@@ -1,4 +1,4 @@
-## CppCheck (tvoj slučaj)
+## CppCheck 
 
 Alat **Cppcheck** je analizom koda projekta detektovao veći broj nalaza u više kategorija: preporuke vezane za **inicijalizaciju članova u initializer list-i**, neusklađena imena argumenata između deklaracije i definicije funkcija (`funcArgNamesDifferent`), **neiskorišćene promenljive i funkcije** (`unusedFunction`, `unusedVariable`, `unreadVariable`), kao i preporuke tipa `functionConst`/`functionStatic` koje se tiču stila i potencijalne optimizacije.
 
