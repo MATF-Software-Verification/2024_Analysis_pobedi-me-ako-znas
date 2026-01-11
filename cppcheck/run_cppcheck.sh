@@ -23,7 +23,7 @@ cppcheck --enable=all --inconclusive --std=c++17 \
   --suppress=missingInclude \
   --xml --xml-version=2 \
   --output-file="$OUTXML" \
-  "$TARGET/application" "$TARGET/server" "$TARGET/tests" || true
+  "$TARGET/application" "$TARGET/server" || true
 
 # Provera da je XML zaista kreiran
 if [ ! -f "$OUTXML" ]; then
